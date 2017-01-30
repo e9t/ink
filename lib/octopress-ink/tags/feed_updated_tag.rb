@@ -12,7 +12,7 @@ module Octopress
             posts = site[feed] || site['posts']
           end
 
-          if posts && !toposts.docs.empty?
+          if posts && !posts.docs.empty?
             post = posts.sort_by do |p|
               p.data['date_updated'] || p.date
             end.last
